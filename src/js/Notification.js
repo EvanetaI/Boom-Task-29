@@ -17,7 +17,7 @@ export default class Notification {
     // closeBtn.addEventListener("click", close)
   }
 
-  render(type, price) {
+  render(price, type) {
     const template = `
     <div class="notification type-${type} ${classNames({
       "is-danger": type === Notification.types.HAWAIIAN,
@@ -37,8 +37,7 @@ export default class Notification {
     this.container.remove()
   }
 
-  clearContent(){
-    this.container.innerHTML = "";
+  empty(){
   }
 
 }

@@ -17,7 +17,7 @@ export default class Notification {
     // closeBtn.addEventListener("click", close)
   }
 
-  render(price, type) {
+  render({ type, price }) {
     const template = `
     <div class="notification type-${type} ${classNames({
       "is-danger": type === Notification.types.HAWAIIAN,
